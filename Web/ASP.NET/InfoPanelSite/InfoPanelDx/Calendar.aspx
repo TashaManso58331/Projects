@@ -1,0 +1,53 @@
+<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Main.master" CodeBehind="Calendar.aspx.cs" Inherits="InfoPanelDx.Calendar" %>
+
+<%@ Register Assembly="DevExpress.Web.ASPxScheduler.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxScheduler" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.ASPxScheduler.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxScheduler.Controls" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.ASPxScheduler.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxScheduler.Reporting" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.XtraScheduler.v20.1.Core, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.XtraScheduler" TagPrefix="dx" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="Left" runat="server">
+    <div class="navcontainer">
+        <%-- DXCOMMENT: Configure DateNavigator for Scheduler --%>
+        <dx:ASPxDateNavigator runat="server" ID="DateNavigator" MasterControlID="Scheduler" CssClass="datenavigator">
+            <Properties Rows="2" DayNameFormat="FirstLetter">
+                <Style Border-BorderWidth="0"></Style>
+            </Properties>
+        </dx:ASPxDateNavigator>
+    </div>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <%-- DXCOMMENT: Configure ASPxScheduler control --%>
+    <dx:ASPxScheduler runat="server" ID="Scheduler" AppointmentDataSourceID="AppointmentDataSource" ResourceDataSourceID="ResourceDataSource"
+        ActiveViewType="WorkWeek" Width="100%">
+        <Views>
+            <DayView>
+                <VisibleTime Start="8:00" End="20:00" />
+            </DayView>
+            <WorkWeekView>
+                <VisibleTime Start="8:00" End="20:00" />
+            </WorkWeekView>
+            <WeekView Enabled="False" />
+            <MonthView CompressWeekend="False" />
+            <TimelineView Enabled="False" />
+        </Views>
+        <Storage EnableReminders="False">
+            <Appointments>
+                <%-- DXCOMMENT: Configure appointment mappings --%>
+            </Appointments>
+            <Resources>
+                <%-- DXCOMMENT: Configure resource mappings --%>
+            </Resources>
+        </Storage>
+        <OptionsBehavior RecurrentAppointmentEditAction="Ask" />
+        <BorderLeft BorderWidth="0" />
+    </dx:ASPxScheduler>
+    
+    <%-- DXCOMMENT: Configure a datasource for ASPxScheduler's appointments --%>
+    <asp:SqlDataSource ID="AppointmentDataSource" runat="server" ProviderName="System.Data.SqlClient">
+    </asp:SqlDataSource>
+
+    
+    <%-- DXCOMMENT: Configure a datasource for ASPxScheduler's resources --%>
+    <asp:SqlDataSource ID="ResourceDataSource" runat="server" ProviderName="System.Data.SqlClient">
+    </asp:SqlDataSource>
+</asp:Content>

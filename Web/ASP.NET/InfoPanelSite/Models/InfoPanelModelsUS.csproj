@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8075DC7D-B7BE-4262-94EF-074BF4913EA0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InfoPanelModels</RootNamespace>
+    <AssemblyName>InfoPanelModels</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\Backend\InfoPanelBackendUS\InfoPanelService.Data\Enums\BalanceStatus.cs">
+      <Link>Models\External\BalanceStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Backend\InfoPanelBackendUS\InfoPanelService.Data\Enums\CalcType.cs">
+      <Link>Models\External\CalcType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Backend\InfoPanelBackendUS\InfoPanelService.Data\Enums\DispencerVehicleType.cs">
+      <Link>Models\External\DispencerVehicleType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Backend\InfoPanelBackendUS\InfoPanelService.Data\Enums\PaymentMethod.cs">
+      <Link>Models\External\PaymentMethod.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Backend\InfoPanelBackendUS\InfoPanelService.Data\Enums\PaymentState.cs">
+      <Link>Models\External\PaymentState.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Backend\InfoPanelBackendUS\InfoPanelService.Data\Enums\RouteFuelTransactionStepType.cs">
+      <Link>Models\External\RouteFuelTransactionStepType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Backend\InfoPanelBackendUS\InfoPanelService.Data\Enums\StationPortalDispencersType.cs">
+      <Link>Models\External\StationPortalDispencersType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Backend\InfoPanelBackendUS\InfoPanelService.Data\Enums\StepBehavior.cs">
+      <Link>Models\External\StepBehavior.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Backend\InfoPanelBackendUS\InfoPanelService.Data\Enums\TankSide.cs">
+      <Link>Models\External\TankSide.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Backend\InfoPanelBackendUS\InfoPanelService.Data\Enums\TextType.cs">
+      <Link>Models\External\TextType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Backend\InfoPanelBackendUS\InfoPanelService.Data\Enums\TruckPortalDispencersType.cs">
+      <Link>Models\External\TruckPortalDispencersType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Backend\InfoPanelBackendUS\InfoPanelService.Data\Enums\VehicleAvailability.cs">
+      <Link>Models\External\VehicleAvailability.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Backend\InfoPanelBackendUS\InfoPanelService.Data\Enums\VehicleClass.cs">
+      <Link>Models\External\VehicleClass.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Mobile\Common\DMSettings\Services.cs">
+      <Link>Common\Services.cs</Link>
+    </Compile>
+    <Compile Include="Common\Constants.cs" />
+    <Compile Include="Common\PriceType.cs" />
+    <Compile Include="Models\ACHBalanceSellersManager.cs" />
+    <Compile Include="Models\ACHPaymentManager.cs" />
+    <Compile Include="Models\ACHPayment.cs" />
+    <Compile Include="Models\BaseFakeItem.cs" />
+    <Compile Include="Models\BaseFakeItemManager.cs" />
+    <Compile Include="Models\Cashback.cs" />
+    <Compile Include="Models\CashbackManager.cs" />
+    <Compile Include="Models\CategoryParamManager.cs" />
+    <Compile Include="Models\CategoryParam.cs" />
+    <Compile Include="Models\CategoryType.cs" />
+    <Compile Include="Models\CategoryTypeManager.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\CategoryManager.cs" />
+    <Compile Include="Models\FuelTransactionsPatternPayment.cs" />
+    <Compile Include="Models\GasStationChainPatternPaymentManager.cs" />
+    <Compile Include="Models\FuelTransactionsPatternPaymentManager.cs" />
+    <Compile Include="Models\GasStationChainPatternPayment.cs" />
+    <Compile Include="Models\ACHBalance.cs" />
+    <Compile Include="Models\ACHBalanceManager.cs" />
+    <Compile Include="Models\MemberPatternManager.cs" />
+    <Compile Include="Models\GasStationChainPatternManager.cs" />
+    <Compile Include="Models\MemberPattern.cs" />
+    <Compile Include="Models\GasStationChainPattern.cs" />
+    <Compile Include="Models\UserNetworkingTitle.cs" />
+    <Compile Include="Models\NetworkingTitleManager.cs" />
+    <Compile Include="Models\NetworkingTitle.cs" />
+    <Compile Include="Models\NetworkingTitleCategoryManager.cs" />
+    <Compile Include="Models\NetworkingTitleCategory.cs" />
+    <Compile Include="Models\UserNetworkingTitleManager.cs" />
+    <Compile Include="Models\WireCardCountry.cs" />
+    <Compile Include="Models\WireCardCountryManager.cs" />
+    <Compile Include="Models\InstructionManager.cs" />
+    <Compile Include="Models\Instruction.cs" />
+    <Compile Include="Models\FuelTransactionsPattern.cs" />
+    <Compile Include="Models\FuelTransactionsPatternManager.cs" />
+    <Compile Include="Models\FuelTransactionsPatternStep.cs" />
+    <Compile Include="Models\FuelTransactionsPatternStepManager.cs" />
+    <Compile Include="Models\FuelTransactionsPatternStepScreen.cs" />
+    <Compile Include="Models\FuelTransactionsPatternStepScreenManager.cs" />
+    <Compile Include="Models\Route.cs" />
+    <Compile Include="Models\RouteFuelTransactionManager.cs" />
+    <Compile Include="Models\RouteFuelTransaction.cs" />
+    <Compile Include="Models\RouteFuelTransactionStep.cs" />
+    <Compile Include="Models\RouteFuelTransactionStepManager.cs" />
+    <Compile Include="Models\RouteFuelTransactionStepScreen.cs" />
+    <Compile Include="Models\RouteFuelTransactionStepScreenManager.cs" />
+    <Compile Include="Models\RouteManager.cs" />
+    <Compile Include="Models\Schedule.cs" />
+    <Compile Include="Models\ActionRoleManager.cs" />
+    <Compile Include="Models\ActionRole.cs" />
+    <Compile Include="Models\Action.cs" />
+    <Compile Include="Models\AccountMovement.cs" />
+    <Compile Include="Models\AccountMovementManager.cs" />
+    <Compile Include="Models\AccountsMovementFormulaManager.cs" />
+    <Compile Include="Models\AccountsMovementFormula.cs" />
+    <Compile Include="Models\ActionManager.cs" />
+    <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\CountryManager.cs" />
+    <Compile Include="Models\DispencerFuel.cs" />
+    <Compile Include="Models\DispencerFuelManager.cs" />
+    <Compile Include="Models\DispencerManager.cs" />
+    <Compile Include="Models\EnumsManager.cs" />
+    <Compile Include="Models\EnumValues.cs" />
+    <Compile Include="Models\FakeManger.cs" />
+    <Compile Include="Models\ScheduleManager.cs" />
+    <Compile Include="Models\TankManager.cs" />
+    <Compile Include="Models\Dispencer.cs" />
+    <Compile Include="Models\Tank.cs" />
+    <Compile Include="Models\SeasonManager.cs" />
+    <Compile Include="Models\Season.cs" />
+    <Compile Include="Models\InjectorManager.cs" />
+    <Compile Include="Models\Injector.cs" />
+    <Compile Include="Models\FuelTypeManager.cs" />
+    <Compile Include="Models\FuelType.cs" />
+    <Compile Include="Models\MemberTypeToRolesMapManager.cs" />
+    <Compile Include="Models\MemberTypeToRolesMap.cs" />
+    <Compile Include="Models\Movement.cs" />
+    <Compile Include="Models\MovementRequest.cs" />
+    <Compile Include="Models\MovementType.cs" />
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\AccountManager.cs" />
+    <Compile Include="Models\AmsShema.cs" />
+    <Compile Include="Models\AccountsGenerationFormulaManager.cs" />
+    <Compile Include="Models\MovementManager.cs" />
+    <Compile Include="Models\MovementTypeManager.cs" />
+    <Compile Include="Models\Contract.cs" />
+    <Compile Include="Models\ContractParam.cs" />
+    <Compile Include="Models\ContractParamManager.cs" />
+    <Compile Include="Models\ContractManager.cs" />
+    <Compile Include="Models\GasStationChainManager.cs" />
+    <Compile Include="Models\GasStationChain.cs" />
+    <Compile Include="Models\GasStationCashierManager.cs" />
+    <Compile Include="Models\GasStationCashier.cs" />
+    <Compile Include="Models\AccountsGenerationFormula.cs" />
+    <Compile Include="Models\AmsShemaManager.cs" />
+    <Compile Include="Models\LoginPassword.cs" />
+    <Compile Include="Models\MailMsg.cs" />
+    <Compile Include="Models\MemberTypeManager.cs" />
+    <Compile Include="Models\MemberType.cs" />
+    <Compile Include="Models\TruckManager.cs" />
+    <Compile Include="Models\CrewDriverManager.cs" />
+    <Compile Include="Models\CrewTruckManager.cs" />
+    <Compile Include="Models\CrewManager.cs" />
+    <Compile Include="Models\Truck.cs" />
+    <Compile Include="Models\CrewDriver.cs" />
+    <Compile Include="Models\CrewTruck.cs" />
+    <Compile Include="Models\Crew.cs" />
+    <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\MemberManager.cs" />
+    <Compile Include="Models\UserRoleManager.cs" />
+    <Compile Include="Models\UserRole.cs" />
+    <Compile Include="Models\UserManager.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\RoleManager.cs" />
+    <Compile Include="Models\InfoPanelItemManager.cs" />
+    <Compile Include="Models\InfoPanelItem.cs" />
+    <Compile Include="Models\BaseItem.cs" />
+    <Compile Include="Models\BaseItemManager.cs" />
+    <Compile Include="Models\GasStation.cs" />
+    <Compile Include="Models\GasStationManager.cs" />
+    <Compile Include="Models\Currency.cs" />
+    <Compile Include="Models\CurrencyManager.cs" />
+    <Compile Include="Models\Fuel.cs" />
+    <Compile Include="Models\FuelManager.cs" />
+    <Compile Include="Models\TodoItem.cs" />
+    <Compile Include="Models\TodoItemManager.cs" />
+    <Compile Include="Models\UserStatusMapManager.cs" />
+    <Compile Include="Models\UserStatusMap.cs" />
+    <Compile Include="Models\UserStatus.cs" />
+    <Compile Include="Models\UserStatusManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Mobile.Client, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.Mobile.Client.4.1.1\lib\portable-net45+win8+wp8+wpa81\Microsoft.Azure.Mobile.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLCrypto, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d4421c8a4786956c, processorArchitecture=MSIL">
+      <HintPath>..\packages\PCLCrypto.2.0.147\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\PCLCrypto.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.BCrypt, Version=0.5.0.0, Culture=neutral, PublicKeyToken=9e300f9f87f04a7a, processorArchitecture=MSIL">
+      <HintPath>..\packages\PInvoke.BCrypt.0.5.184\lib\portable-net45+win8+wpa81\PInvoke.BCrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.Kernel32, Version=0.5.0.0, Culture=neutral, PublicKeyToken=9e300f9f87f04a7a, processorArchitecture=MSIL">
+      <HintPath>..\packages\PInvoke.Kernel32.0.5.184\lib\portable-net45+win8+wpa81\PInvoke.Kernel32.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.NCrypt, Version=0.5.0.0, Culture=neutral, PublicKeyToken=9e300f9f87f04a7a, processorArchitecture=MSIL">
+      <HintPath>..\packages\PInvoke.NCrypt.0.5.184\lib\portable-net45+win8+wpa81\PInvoke.NCrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.Windows.Core, Version=0.5.0.0, Culture=neutral, PublicKeyToken=9e300f9f87f04a7a, processorArchitecture=MSIL">
+      <HintPath>..\packages\PInvoke.Windows.Core.0.5.184\lib\portable-net45+win8+wpa81\PInvoke.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.2\System.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net45+win8+wpa81\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net45+win8+wpa81\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.2\System.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Validation, Version=2.4.0.0, Culture=neutral, PublicKeyToken=2fc06f0d701809a7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Validation.2.4.22\lib\portable-net45+win8+wp8+wpa81\Validation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
