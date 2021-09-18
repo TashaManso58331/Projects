@@ -1050,12 +1050,6 @@
     <Folder Include="Imports\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Models\InfoPanelModelsUS.csproj">
-      <Project>{8075dc7d-b7be-4262-94ef-074bf4913ea0}</Project>
-      <Name>InfoPanelModelsUS</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <PropertyGroup>
